@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Hackathon Registration</title>
+</head>
+<body>
+    <script>
+    function HackValidation() {
+        var name1 = 
+            document.forms["RegForm"]["firstname"];
+            var name2 = 
+            document.forms["RegForm"]["Lastname"];
+
+        var email = 
+            document.forms["RegForm"]["EMail"];
+        var phone = 
+            document.forms["RegForm"]["Telephone"];
+        var what = 
+            document.forms["RegForm"]["Subject"];
+        var password = 
+            document.forms["RegForm"]["Password"];
+        var Idea = 
+            document.forms["RegForm"]["Idea"];
+
+        if (name1.value == "") {
+            window.alert("Please enter your name.");
+            name.focus();
+            return false;
+        }
+        if (name2.value == "") {
+            window.alert("Please enter your name.");
+            name.focus();
+            return false;
+        }
+
+        if (Idea.value == "") {
+            window.alert("Please enter your idea.");
+            address.focus();
+            return false;
+        }
+
+        if (email.value == "") {
+            window.alert(
+              "Please enter a valid e-mail address.");
+            email.focus();
+            return false;
+        }
+
+        
+        
+        
+
+        if (password.value == "") {
+            window.alert("Please enter your password");
+            password.focus();
+            return false;
+        }
+
+        if (what.selectedIndex < 1) {
+            alert("Please enter your course.");
+            what.focus();
+            return false;
+        }
+
+        return true;
+    }
+</script>
+<h1 style="text-align: center;">IWP HACK</h1>
+<h2 style="text-align: center;">Registration Form</h2>
+<form name="HackForm" onsubmit="return HackValidation()" method="post">
+    <label>First Name:</label>
+    <input type="text" size="40" name="firstname"><br> <br>
+    <label>Last Name</label>
+    <input type="text" size="40" name="lastname"><br> <br>
+    <label> Qualification :</label>
+    <select>
+        <option value="Course">None</option> 
+        <option value="High School">High School</option>
+        <option value="B.Tech">B.Tech</option>
+        <option value="M.Tech">M.Tech</option>
+        <option value="P.hd">P.hd</option>
+
+
+    </select>
+    <br>
+
+    <br>
+    <label for="email">email:</label>
+    <input type="email"  size="40" id="email" name="email"> <br>
+    <br>
+    <label for="Gender">Gender:</label>
+    <input type="radio" id="gender" name="gender" value="male"/>Male  
+              <input type="radio" id="gender" name="gender" value="female"/>Female <br/> 
+              <br>
+    
+
+
+
+    <label>Country</label>
+    <input type="text" country="countryName"> <br>  <br>
+    <label>State</label>
+    <input type="text" state="stateName"> <br>  <br>
+    Problem Domains:<br>  
+              <input type="checkbox" id="Agriculture" name="Agriculture" value="Agriculture"/>  
+                 <label for="Agriculture">Agriculture</label> <br>  
+              <input type="checkbox" id="Education" name="Education" value="Eucation"/>  
+                 <label for="Education">Education</label> <br>  
+              <input type="checkbox" id="Fintech" name="Fintech" value="Fintech"/>  
+                 <label for="Fintech">Fintech</label>  <br>
+                 <br>
+
+    <label for="Idea">Your Idea</label>
+    <br>
+    <textarea rows="4" cols="50" placeholder="Describe your idea..."></textarea>
+
+    <br>
+    <br>
+   <label for="video"> Your video(min 5 minute):</label>
+    <iframe width="200" height="150" src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=0">
+    </iframe>
+    <br>
+    <br>
+
+
+    Password:  
+<input type="Password" size="40" id="pass" name="pass"> <br>   
+<br> <br>
+Re-type password:  
+<input type="Password"  size="40" id="repass" name="repass"> <br> <br>  
+<label for="avatar">Upload Your Image</label>
+<input type="file"
+id="avatar" name="avatar"
+accept="image/png,image/jpeg">
+<br>
+<br>
+
+
+<input type="reset" value="Reset"/>
+<input type="button" value="Submit"/>  
+
+
+
+
+</form>
+
+    
+</body>
+</html>
